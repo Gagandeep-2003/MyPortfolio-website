@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css  ">
+    <title>Projects</title>
+    <style>
+        body{
+            background-color: rgb(34,34,34);
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+        }
+        nav{
+            background-color: rgb(51, 51, 51);
+            border-radius: 20px;
+
+        }
+        nav li{
+            list-style: none;
+        }
+       nav ul{
+            display: flex;
+        }
+        nav li a{
+            display: flex;
+            text-decoration: none;
+            padding: 0 10px;
+            color: rgb(242 , 241, 45);
+            position: relative;
+            padding: 8px 15px;
+            margin: 10px 50px;
+        }
+       nav ul li a::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border-top: 2px solid rgb(242 , 241, 45);
+            border-left: 2px solid rgb(242 , 241, 45);
+            transition: all 0.3s linear;
+            transform-origin: left;
+        }
+        
+        nav li a::after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            bottom: 0;
+            right: 0;
+            border-bottom: 2px solid rgb(242 , 241, 45);
+            border-right: 2px solid rgb(242 , 241, 45) ;
+            transition: all 0.3s linear;
+            transform-origin: left;
+        }
+        nav li a:hover::before,
+        nav li a:hover::after{
+            width: 10%;
+            height: 20%;
+            transform: rotate(360deg);
+        }
+        nav li a:hover{
+            color: #fff;
+            text-shadow: 0 0 10px #fff,
+            0 0 20px #fff,
+            0 0 40px #fff,
+            0 0 80px #fff,
+            0 0 120px #fff,
+            0 0 160px #fff;
+        }
+
+        /* projects
+         */
+        .projects {
+            padding-top: 100px;
+            display: flex;
+        }
+    
+        .projects .col-3 {
+            background-color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 0 20px 0px rgba(243, 240, 240,0.5);
+            transition: transform 0.5s;
+            flex: 1; 
+            max-width: 400px; 
+            margin: 0 10px; 
+        }
+    
+        .projects .col-3 img {
+            width: 80px;
+            margin: 20%;
+            border-radius: 10%;
+            box-shadow: 10px 10px 10px grey;
+        }
+    
+        .projects .col-3:hover {
+            transform: translatey(-10px);
+        }
+    
+        .col-3 {
+            font-size: 12px;
+            margin: 6px 0;
+            column-rule: #777;
+        }
+    
+        .small-container {
+            max-width: 1200px; 
+            margin: auto;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+    
+        .row {
+            display: flex;
+            align-items: flex-start; 
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        /* ----footer---- */
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 10px 0;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: rgb(51,51,51);
+            color: #ccc;
+            font-family: 'Times New Roman', Times, serif;
+            
+        }
+
+        .about{
+            width: 40%;
+            margin-bottom: 40px;
+            margin-left: 20px;
+        }
+
+        .f-links{
+            width: 20%;
+            margin-top: -10px;
+        }
+
+
+        .f-address{
+            width: 20%;
+            margin-bottom: 33px;
+        }
+
+       .footer li {
+            list-style: none;
+            padding: 2  px 0;
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 13px;
+        }
+       .footer a:hover{
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 0 0 10px #fff,  /*this is for glowing effect when we hover*/
+                         0 0 20px #fff,
+                         0 0 40px #fff,
+                         0 0 80px #fff,
+                         0 0 120px #fff,
+                         0 0 160px #fff;
+        }
+        
+      .footer h1{
+            display: inline;
+            font-size: 17px;
+            padding-left: 40px;
+            position: relative;
+        }
+
+       .footer h1::before{
+            content: " ";
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 0;
+            height: 2px;
+            background-color: #ccc;
+            border-radius: 10px;
+            transition-duration: 0.2s;
+            transition-timing-function: linear;
+        }
+
+    
+     h1:hover::before{
+            content: "* ""* ""* ""* ""* ";
+            font-size: 16px;
+            padding-top: 4px;
+            margin-left: 40px;
+            width: 60px;
+         } 
+        
+
+        .about h1{
+            padding: 0;
+        }
+
+        .about a{
+            font-size: 13px;
+            display: block;
+        }
+
+        .about p{
+            font-size: 15px;
+            
+        }
+        i{
+            font-size: 11px;
+            padding: 0 3px;
+        }
+        .f-address i{
+            padding: 0 6px;
+        }
+        /* .social-icons{
+            margin: 5rem 0;
+            text-align: center;
+        }
+        .social-icons{
+            width: 4rem;
+            height: 4rem;
+            display: inline-block;
+            padding: 1.4rem 1.8rem;
+            position: relative;
+            animation: waterwave 3s linear infinite;
+            cursor: pointer;
+        }
+        .f-credits{
+            text-align: center;
+        } */
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html" target="_blank">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#address">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="projects" id="projects">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <h2>Registration Form & Tic Tac Toe Game:
+                    </h2>
+            <p>
+                        Build a robust registration form to collect user details securely. Additionally, create an engaging Tic Tac Toe game with multiplayer or AI opponents for an interactive and enjoyable experience.</p>
+                    <img src="img/python.jpg">
+                    <h3>Python</h3>
+                </div>
+                <div class="col-3">
+                    <h2>E-commerce website & Forms using Validations:</h2>
+                    <p>
+                        Crafted visually appealing shopping websites and implemented form validations using JavaScript, ensuring accurate data submission. Developed user-friendly interfaces and integrated secure payment systems, enhancing user experience and data integrity.</p>
+                    <img src="img/html.jpg" width="50px" style="margin-bottom: 60px;">
+                    <h3>Web Designing</h3>
+                </div>
+                <div class="col-3">
+                    <h2>College Management System & Library Management System:</h2>
+                    <p>Designed and developed a comprehensive SQL-based College Management System and Library Management System, empowering educational institutions with efficient tools for student information management and simplified management of library resources and interactions</p>
+                    <img src="img/sql.jpg">
+                    <h3>SQL</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer>
+        <div class="footer" id="about">
+            <div class="about">
+                <h1>About</h1>
+                <p>I am a passionate and skilled professional with expertise in various fields. My portfolio website showcases my diverse experience, highlighting my creativity, problem-solving abilities, and dedication. Through my work, I aim to make a positive impact and deliver exceptional results.</p>
+            </div>
+            <div class="f-links">
+                <h1>Links</h1>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-arrow-right"></i> <!-- this is taken from ionic website -->
+                        <a href="index.html" target="_blank">Home</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-arrow-right"></i> <!-- this is taken from ionic website -->
+                        <a href="#about">About</a>
+                    </li>
+                   
+                    <li>
+                        <i class="fa-solid fa-arrow-right"></i> <!-- this is taken from ionic website -->
+                        <a href="#projects">Portfolio</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-arrow-right"></i> <!-- this is taken from ionic website -->
+                        <a href="#address">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="f-services">
+                <h1>Services</h1>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-arrow-right"></i> <!-- this is taken from ionic website -->
+                        <a href="#">Web Development</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-arrow-right"></i> <!-- this is taken from ionic website -->
+                        <a href="#">Web Design</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-arrow-right"></i> <!-- this is taken from ionic website -->
+                        <a href="#">SQL</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-arrow-right"></i> <!-- this is taken from ionic website -->
+                        <a href="#">C++</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-arrow-right"></i> <!-- this is taken from ionic website -->
+                        <a href="#">Python</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="f-address" id="address">
+                <h1>Address</h1>
+                <address>
+                    <ul>
+                        <li>
+                            <ion-icon name="arrow-forward-outline"></ion-icon> <!-- this is taken from ionic website -->
+                           <a href="#"> <i class="fa-solid fa-location-dot"></i>Punjab,Mullanpur</a>
+                        </li>
+                        <li>
+                             <!-- this is taken from ionic website -->
+                            <a href=" mailto:gagandeeppctebca21a@gmail.com"><i class="fa-solid fa-envelope"></i>gaganpctebca21a@gmail.com</a>
+                        </li>
+                        <li>
+                            <ion-icon name="caret-forward-outline"></ion-icon> <!-- this is taken from ionic website -->
+                            <a href="tel:+919463567280"><i class="fa-solid fa-phone"></i>9463567280</a><br>
+                        </li>
+
+                    </ul>
+                </address>
+                <!-- <div class="row">
+                <div class="container">
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                <div class="f-credits">
+                    <p>copyright &#169; All rights reserved | Gagan's Portfolio</p>
+                </div>
+                </div> -->
+            </div>
+
+    </footer>
+</body>
+
+</html>
